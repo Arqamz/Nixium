@@ -77,6 +77,9 @@ in
         tmux
         # Count lines of code
         cloc
+
+	# Benchmarking tool
+	hyperfine glmark2
         
         # JavaScript runtime
         bun
@@ -142,8 +145,7 @@ in
         tshark
         # Command-line packet analyzer
         tcpdump
-	# Benchmark
-	glmark2
+
         # Terminal file manager
         eza yazi
 
@@ -198,12 +200,12 @@ in
         # Editors and IDEs
         neovim
 	# Visual Studio Code
-        vscode
+#       vscode
         # Extensions for Visual Studio Code
 	(vscode-with-extensions.override {
 		vscodeExtensions = with vscode-extensions; [
 			bbenoist.nix
-		        ms-python.python
+			#drcika.apc-extension
 	        	ms-azuretools.vscode-docker
 	        	ms-vscode-remote.remote-ssh
 		] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
@@ -213,6 +215,12 @@ in
 				version = "0.47.2";
 				sha256 = "1hp6gjh4xp2m1xlm1jsdzxw9d8frkiidhph6nvl24d0h8z34w49g";
 			}
+			{
+      				name = "apc-extension";
+				publisher = "drcika";
+				version = "0.4.1";
+				sha256 = "7eadaa97173bf8ca7092b6950a5074146b11d0ad7fd8c4f343449850b331e0a8";
+    			}
 		];
 	})
 
@@ -239,7 +247,8 @@ in
         # Music streaming service
         # spotify spicetify-cli
         # Discord
-	betterdiscordctl discord
+	#betterdiscordctl vencord discord
+	vesktop
     ];
   };
 }
