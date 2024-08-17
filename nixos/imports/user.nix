@@ -29,8 +29,7 @@ in
        shuffle # shuffle+ (special characters are sanitized out of extension names)
        fullAppDisplay
      ];
-     theme = spicePkgs.themes.catppuccin;
-     colorScheme = "mocha";
+     theme = spicePkgs.themes.text;
    };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -57,9 +56,9 @@ in
         lazygit
         # File manager
         xfce.thunar
-	# Terminal multiplexer
-	tmux
+
 	# Ghosttty in the future
+
         # GPU-accelerated terminal emulator
         kitty
         # Terminal emulator
