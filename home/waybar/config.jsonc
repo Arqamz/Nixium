@@ -7,13 +7,11 @@
   "reload_style_on_change": true,
   "fixed-center": true,
 
-  // #,"custom/spotify", "custom/cava"],
-
-  "modules-left": ["clock"],
+  "modules-left": ["clock","custom/spotify", "custom/cava"],
   "modules-center": ["hyprland/workspaces"],
   "modules-right": [
     "group/performance",
-    // "pulseaudio",
+    "pulseaudio",
     "group/connect",
     "battery",
     "custom/launcher"
