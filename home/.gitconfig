@@ -1,0 +1,20 @@
+[user]
+	name = Arqam Zia
+	email = arqam.mzia@gmail.com
+	signingkey = CD99A74AC7B4364B
+[init]
+	defaultBranch = main
+
+[core]
+    sshCommand = ssh -i ~/.ssh/id_ed25519
+
+[commit]
+    gpgSign = true
+
+[gpg]
+    program = gpg
+
+[tag]
+    gpgsign = true
+[pass]
+	signcommits = true
