@@ -18,5 +18,6 @@
     htop
     nvtopPackages.intel
     nvtopPackages.amd
+    xorg.xrdb
   ];
 }
