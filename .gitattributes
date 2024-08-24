@@ -1,6 +1,0 @@
-*.roff linguist-detectable=false
-*.conf.* linguist-detectable=false
-*.sh linguist-detectable=false
-*.zshrc linguist-detectable=false
-*.zsh linguist-detectable=false
-*.vert linguist-detectable=false
