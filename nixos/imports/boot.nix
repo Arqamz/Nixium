@@ -15,6 +15,6 @@
       theme = "breeze";
     };
     kernelModules = ["amdgpu"];
-    kernelParams = [ "quiet" "udev.log_level=0" "radeon.si_support=0" "amdgpu.si_support=1" ];
+    kernelParams = [ "quiet" "loglevel=0" "radeon.si_support=0" "amdgpu.si_support=1" ];
   };
 }

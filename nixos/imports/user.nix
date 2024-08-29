@@ -32,21 +32,21 @@ in
      theme = spicePkgs.themes.text;
      colorScheme = "custom";
      customColorScheme = {
-  	 main_fg                               = "\${xrdb:color3}";
-  	 secondary_fg                          = "\${xrdb:color6}";
-	 main_bg                               = "\${xrdb:color0}";
- 	 sidebar_and_player_bg                 = "\${xrdb:color0}";
+  	 main_fg                               = "60549D";
+  	 secondary_fg                          = "6295C4";
+	 main_bg                               = "030215";
+ 	 sidebar_and_player_bg                 = "030215";
 	 cover_overlay_and_shadow              = ''"000000"'';
-	 indicator_fg_and_button_bg            = "\${xrdb:color3}";
+	 indicator_fg_and_button_bg            = "60549D";
 	 pressing_fg                           = "FF5C86";
-	 slider_bg                             = "\${xrdb:color1}";
-	 sidebar_indicator_and_hover_button_bg = "\${xrdb:color2}";
-	 scrollbar_fg_and_selected_row_bg      = "\${xrdb:color5}";
-	 pressing_button_fg                    = "\${xrdb:color6}";
-	 pressing_button_bg                    = "\${xrdb:color4}";
-	 selected_button                       = "\${xrdb:color2}";
-	 miscellaneous_bg                      = "\${xrdb:color1}";
-	 miscellaneous_hover_bg                = "\${xrdb:color4}";
+	 slider_bg                             = "030215";
+	 sidebar_indicator_and_hover_button_bg = "344994";
+	 scrollbar_fg_and_selected_row_bg      = "CB7191";
+	 pressing_button_fg                    = "6295C4";
+	 pressing_button_bg                    = "9E6495";
+	 selected_button                       = "344994";
+	 miscellaneous_bg                      = "030215";
+	 miscellaneous_hover_bg                = "9E6495";
 	 preserve_1                            = "FFFFFF";
      };
    };
@@ -85,10 +85,10 @@ in
         # Minimalistic Wayland terminal emulator
         foot
         # Window switcher, application launcher, and dmenu replacement and Ulauncher(add extensions)
-        rofi ulauncher
+        rofi-wayland ulauncher
         # Highly customizable Wayland bar
         waybar ags #add quickshell
-        wttrbar pywal
+        wttrbar pywal wallust
 	# System information tool
         neofetch fastfetch nitch
         # Terminal multiplexer
@@ -219,7 +219,7 @@ in
         # Editors and IDEs
         neovim
 	# Visual Studio Code
-#       vscode
+        vscode
         # Extensions for Visual Studio Code
 	(vscode-with-extensions.override {
 		vscodeExtensions = with vscode-extensions; [

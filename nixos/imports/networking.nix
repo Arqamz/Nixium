@@ -6,10 +6,7 @@
 
   networking.nameservers = [ "1.1.1.1" "1.0.0.1" ];
 
-  networking.resolvconf.enable = pkgs.lib.mkForce false;
-  networking.dhcpcd.extraConfig = "nohook resolv.conf";
-  networking.networkmanager.dns = "none";
-  services.resolved.enable = false;
+  services.resolved.enable = true;
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";

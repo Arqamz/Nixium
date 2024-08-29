@@ -26,7 +26,7 @@ alias bloat="nix path-info -Sh /run/current-system";
 alias .="eza -h --git --icons --color=auto --group-directories-first -s extension -a";
 alias ls="eza -h --git --icons --color=auto --group-directories-first -s extension"; #Re-define later cuz ohmyzsh
 alias la="eza -lah --tree"; # List all tree
-alias ls="ls -lF --time-style=long-iso"
+alias l="ls -lF --time-style=long-iso"
 alias tree="eza --tree --icons=always"
 alias lf="yazi"
 alias cat="bat --style=plain --paging=never"
