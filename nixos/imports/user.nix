@@ -57,6 +57,9 @@ in
     description = "Arqam Zia";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
+	
+	cht-sh
+
         # Hyprland related packages
         # Wayland compositor
         hyprland
