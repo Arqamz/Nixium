@@ -76,8 +76,6 @@ in
 
         #Simple terminal UI for git commands
         lazygit
-        # File manager
-        xfce.thunar
 
 	# Ghosttty in the future
 
