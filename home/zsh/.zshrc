@@ -28,6 +28,7 @@ alias ls="eza -h --git --icons --color=auto --group-directories-first -s extensi
 alias la="eza -lah --tree"; # List all tree
 alias l="ls -lF --time-style=long-iso"
 alias tree="eza --tree --icons=always"
+alias simpletree="eza --tree --icons=never"
 alias lf="yazi"
 alias cat="bat --style=plain --paging=never"
 alias grep="rg"
