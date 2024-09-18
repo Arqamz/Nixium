@@ -1,13 +1,13 @@
 {
   "layer": "top",
-  "width": 1500,
+  "width": 1860,
   "margin-top": 10,
   "margin-bottom": 0,
   "gtk-layer-shell": true,
   "reload_style_on_change": true,
   "fixed-center": true,
 
-  "modules-left": ["clock","custom/spotify", "custom/cava"],
+  "modules-left": ["clock","custom/spotify", "custom/notify"], //, "custom/cava"
   "modules-center": ["hyprland/workspaces"],
   "modules-right": [
     "group/performance",
@@ -27,19 +27,45 @@
 
   // workspaces
 
+  // "hyprland/workspaces": {
+  //   "disable-scroll": false,
+  //   "on-scroll-up": "hyprctl dispatch workspace e+1",
+  //   "on-scroll-down": "hyprctl dispatch workspace e-1",
+  //   "all-outputs": true,
+  //   "format": "{icon}",
+  //   "format-icons": {
+  //     "urgent": "<span font='12'></span>",
+  //     "active": "<span font='12'>󰮯</span>",
+  //     "default": "<span font='12'>󰊠</span>",
+  //     "sort-by-number": true,
+  //   },
+  // },
+
   "hyprland/workspaces": {
-    "disable-scroll": false,
-    "on-scroll-up": "hyprctl dispatch workspace e+1",
-    "on-scroll-down": "hyprctl dispatch workspace e-1",
-    "all-outputs": true,
-    "format": "{icon}",
-    "format-icons": {
-      "urgent": "<span font='12'></span>",
-      "active": "<span font='12'>󰮯</span>",
-      "default": "<span font='12'>󰊠</span>",
-      "sort-by-number": true,
-    },
-  },
+		"format": "{icon}",
+		"on-scroll-up": "hyprctl dispatch workspace r-1",
+		"on-scroll-down": "hyprctl dispatch workspace r+1",
+		"on-click": "activate",
+		"format-icons": {
+			"urgent": "",
+			"1": "Ⅰ",
+			"2": "Ⅱ",
+			"3": "Ⅲ",
+			"4": "Ⅳ",
+			"5": "Ⅴ",
+			"6": "Ⅵ",
+			"7": "Ⅶ",
+			"8": "Ⅷ",
+			"9": "Ⅸ",
+			"10": "Ⅹ"
+		},
+		"tooltip": false,
+		"active-only": false,
+		"persistent-workspaces": {
+			"*": 5
+		}
+	},
+
 
   // spotify
 
@@ -264,4 +290,29 @@
     "format": " ",
     "on-click": "bash ~/.config/rofi/leave/leave.sh",
   },
+
+  // notifications
+
+  "custom/notify": {
+		"tooltip": false,
+		"format": "{icon}",
+		"format-icons": {
+			"notification": "<span foreground='red'><sup></sup></span>",
+			"none": "",
+			"dnd-notification": "<span foreground='red'><sup></sup></span>",
+			"dnd-none": "",
+			"inhibited-notification": "<span foreground='red'><sup></sup></span>",
+			"inhibited-none": "",
+			"dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+			"dnd-inhibited-none": ""
+		},
+		"return-type": "json",
+		"exec-if": "which swaync-client",
+		"exec": "swaync-client -swb",
+		"on-click": "swaync-client -t -sw",
+		"on-click-right": "swaync-client -d -sw",
+		"escape": true
+	}
+
+
 }
