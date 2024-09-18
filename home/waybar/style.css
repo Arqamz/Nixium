@@ -48,7 +48,7 @@ window#waybar.hidden {
 
 /* workspaces colors */
 
-#workspaces {
+/* #workspaces {
   margin: 6px 6px 6px 6px;
   border-radius: 20px;
   transition: none;
@@ -80,7 +80,42 @@ window#waybar.hidden {
   color: #e6b99d;
   background: transparent;
   font-size: 4px;
+} */
+
+#workspaces {
+  background: alpha(#343451, 0.5);
+  margin-top: 6px;
+  margin-bottom: 6px;
+  padding: 0px 1px;
+  border-radius: 15px;
+  border: 0px;
+  font-weight: bold;
+  font-style: normal;
+  opacity: 0.8;
+  font-size: 16px;
+  color: @textcolor1;
 }
+
+#workspaces button {
+  padding: 0px 5px;
+  margin: 4px 3px;
+  border-radius: 15px;
+  border: 0px;
+  color: @color6;
+  background-color: alpha(@background, 0.3);
+  transition: all 0.3s ease-in-out;
+  opacity: 1.0;
+}
+
+#workspaces button.active {
+  color: @background;
+  background: @color6;
+  border-radius: 15px;
+  min-width: 40px;
+  transition: all 0.3s ease-in-out;
+  opacity:1.0;
+}
+
 
 /* spotify */
 
@@ -365,4 +400,16 @@ window#waybar.hidden {
   transition: none;
   color: #92a2d5;
   background: transparent;
+}
+
+/* Notifcation Center */
+
+#custom-notify {
+  color: @background;
+  background: @color6;
+	margin-bottom: 6px;
+	margin-top: 6px;
+	padding-left: 13px;
+	padding-right: 13px;
+	border-radius: 50px;
 }
