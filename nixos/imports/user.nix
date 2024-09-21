@@ -115,6 +115,8 @@ in
 	bluez-tools	
 	gnome.adwaita-icon-theme
 
+	# Parse json
+	jq
         # Command-line fuzzy finder
         fzf
         # Screenshot utility for Wayland
