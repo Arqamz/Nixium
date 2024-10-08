@@ -1,6 +1,22 @@
 { config, pkgs, lib, ... }:
 
 let
+
+    eclipse-pluggedin = pkgs.eclipses.eclipseWithPlugins {
+      eclipse = pkgs.eclipses.eclipse-java;
+      jvmArgs = [ "-Xmx2048m" ]; # Sets the maximum heap size to 2048 MB
+      plugins = [
+        pkgs.eclipses.plugins.color-theme
+#        (pkgs.eclipses.plugins.buildEclipseUpdateSite {
+#         name = "WindowBuilder-1.18.0-Nightly-Latest";
+#          src = pkgs.fetchurl {
+#            url = "https://www.eclipse.org/downloads/download.php?file=/windowbuilder/updates/nightly/N202409231623/WindowBuilder-Updates-N202409231623.zip";
+#            hash = "sha256-NRHUwqBdqiEfF6D0U9Y8qg/+9E62FPYc8zeOXMIjxLg="; 
+#          };
+#        })
+      ];
+    };
+
     ags = pkgs.ags.overrideAttrs (prev: {
     buildInputs = prev.buildInputs ++ [ pkgs.libdbusmenu-gtk3 ];
     });
@@ -57,7 +73,8 @@ in
     description = "Arqam Zia";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-	
+	#Manage my direnvs
+	lorri	
 	cht-sh
 
         # Hyprland related packages
@@ -220,6 +237,7 @@ in
 	#gobject-introspection-unwrapped
 
         # Editors and IDEs
+
         neovim
 	# Visual Studio Code
         vscode
@@ -246,10 +264,10 @@ in
 		];
 	})
 
+	eclipse-pluggedin
+
         # Audio
 	playerctl pavucontrol cava pulseaudioFull
-
-
 
         # Fun/Useless stuff
 	# Large text
