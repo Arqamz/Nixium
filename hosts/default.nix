@@ -70,7 +70,7 @@
     in {
         # My primary system
         # Dell E6540 with an i7-4610M CPU and an AMD Radeon HD 8790M dGPU
-        asylum = inputs.nixpkgs.lib.nixosSystem {
+        carbon = inputs.nixpkgs.lib.nixosSystem {
             specialArgs = { inherit inputs; };
             modules = [
                 ./carbon/configuration.nix

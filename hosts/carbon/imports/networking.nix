@@ -1,7 +1,7 @@
 
 { config, pkgs, ... }: 
 {
-  networking.hostName = "asylum"; # Define your hostname.
+  networking.hostName = "carbon"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   networking.nameservers = [ "1.1.1.1" "1.0.0.1" ];
